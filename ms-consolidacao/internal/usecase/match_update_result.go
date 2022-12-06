@@ -11,8 +11,8 @@ import (
 )
 
 type MatchUpdateResultInput struct {
-	ID     string
-	Result string
+	ID     string `json:"match_id"`
+	Result string `json:"result"`
 }
 
 type MatchUpdateResultUseCase struct {

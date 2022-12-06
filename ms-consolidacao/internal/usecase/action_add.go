@@ -9,16 +9,23 @@ import (
 )
 
 type ActionAddInput struct {
-	MatchID  string
-	TeamID   string
-	PlayerID string
-	Minute   int
-	Action   string
+	MatchID  string `json:"match_id"`
+	TeamID   string `json:"team_id"`
+	PlayerID string `json:"player_id"`
+	Minute   int    `json:"minutes"`
+	Action   string `json:"action"`
 }
 
 type AddActionUseCase struct {
 	Uow         uow.UowInterface
 	ActionTable entity.ActionTableInterface
+}
+
+func NewAddActionUseCase(uow uow.UowInterface, actionTable *entity.ActionTable) *AddActionUseCase {
+	return &AddActionUseCase{
+		Uow:         uow,
+		ActionTable: actionTable,
+	}
 }
 
 func (a *AddActionUseCase) Execute(ctx context.Context, input ActionAddInput) error {

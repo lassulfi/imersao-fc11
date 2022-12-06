@@ -9,8 +9,8 @@ import (
 )
 
 type MyTeamChoosePlayersInput struct {
-	ID        string
-	PlayersID []string
+	ID        string   `json:"my_team_id"`
+	PlayersID []string `json:"players"`
 }
 
 type MyTeamChoosePlayersUseCase struct {

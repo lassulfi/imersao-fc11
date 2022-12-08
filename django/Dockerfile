@@ -10,4 +10,4 @@ WORKDIR /home/python/app
 
 ENV PIPENV_VENV_IN_PROJECT=True
 
-CMD ["tail", "-f", "/dev/null"]
+CMD ["./.docker/start.dev.sh"]

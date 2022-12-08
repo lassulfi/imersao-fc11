@@ -1,0 +1,119 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$390000$tGEorMUtWnKe3astSi5POW$tEf0elIO7jK1zsrfT5hLLUzvXm2MkGSgjv9AAjdNiaU=",
+            "last_login": "2022-12-07T14:54:20.861Z",
+            "is_superuser": true,
+            "username": "admin@user.com",
+            "first_name": "",
+            "last_name": "",
+            "email": "admin@user.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2022-12-07T14:53:43.480Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "app.player",
+        "pk": 1,
+        "fields": {
+            "name": "Neymar",
+            "initial_price": 10.0
+        }
+    },
+    {
+        "model": "app.player",
+        "pk": 2,
+        "fields": {
+            "name": "Messi",
+            "initial_price": 5.0
+        }
+    },
+    {
+        "model": "app.player",
+        "pk": 3,
+        "fields": {
+            "name": "Cristiano Ronaldo",
+            "initial_price": 10.5
+        }
+    },
+    {
+        "model": "app.team",
+        "pk": 1,
+        "fields": {
+            "name": "Brasil"
+        }
+    },
+    {
+        "model": "app.team",
+        "pk": 2,
+        "fields": {
+            "name": "Argentina"
+        }
+    },
+    {
+        "model": "app.team",
+        "pk": 3,
+        "fields": {
+            "name": "Africa do Sul"
+        }
+    },
+    {
+        "model": "app.myteam",
+        "pk": 1,
+        "fields": {
+            "players": [
+                1,
+                2
+            ]
+        }
+    },
+    {
+        "model": "app.match",
+        "pk": 1,
+        "fields": {
+            "match_date": "2022-12-08T00:05:20Z",
+            "team_a": 1,
+            "team_a_goal": 2,
+            "team_b": 2,
+            "team_b_goal": 1
+        }
+    },
+    {
+        "model": "app.action",
+        "pk": 1,
+        "fields": {
+            "player": 1,
+            "team": 1,
+            "minutes": 40,
+            "match": 1,
+            "action": "goal"
+        }
+    },
+    {
+        "model": "app.action",
+        "pk": 2,
+        "fields": {
+            "player": 2,
+            "team": 2,
+            "minutes": 50,
+            "match": 1,
+            "action": "yellow card"
+        }
+    },
+    {
+        "model": "app.action",
+        "pk": 3,
+        "fields": {
+            "player": 1,
+            "team": 1,
+            "minutes": 15,
+            "match": 1,
+            "action": "assist"
+        }
+    }
+]

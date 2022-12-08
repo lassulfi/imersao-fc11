@@ -14,3 +14,6 @@ admin.site.register(Team)
 admin.site.register(MyTeam)
 admin.site.register(Match, MatchAdmin)
 admin.site.register(Action)
+
+# signals == eventos
+# recievers == listeners
